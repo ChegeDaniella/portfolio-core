@@ -1,0 +1,173 @@
+{% extends 'info-files/base.html' %}
+{% load static %}
+{% load bootstrap3 %}
+
+
+<!-- styles-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    {% block styles %}
+        <link rel="stylesheet" href="{% static 'css/index.css' %}">
+        <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    {% endblock %}
+    
+    
+</head>
+{% block content %}
+<body>
+    <nav class="navbar">
+        <ul class="navbar-nav">
+            <li class="logo">
+                <a href="#" class="nav-link">
+                    <span class="link-text logo-text">Portfolio</span>
+                    <i class="fab fa-4x fa-asymmetrik" id="fa-primary"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#head" class="nav-link">
+                     <i class="fas fa-3x fa-house-damage" id="fa-primary"></i>
+                     <span class="link-text">Home</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#about" class="nav-link">
+                    <i class="fab fa-3x fa-audible" id="fa-primary"></i>
+                     <span class="link-text" >About me</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#portfolio" class="nav-link">
+                    <i class="fas fa-3x fa-project-diagram" id="fa-primary"></i>
+                     <span class="link-text">Projects</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="fas fa-3x fa-ankh" id="fa-primary"></i>
+                     <span class="link-text">Enjoy</span>
+                </a>
+            </li>
+        </ul>
+       
+    </nav>
+   <main>
+
+    <div class="head" id="head">
+        <i class="fab fa-joomla"></i>
+        
+        <p style="font-family: 'Monoton', cursive;">PORTFOLIO WEBSITE</p>
+            
+    </div>
+    <section class="about" id="about">
+        <div class="container">
+            <div class="profile-img">
+                <img src="/static/img/me.jpg">
+            </div>
+           
+            <div class="about-details">
+                <div class="about-heading">
+                    <h1>About</h1>
+                    <h6>Daniella Chege</h6>
+                </div>
+                <p>Daniella Chege is an aspiring software developer.I have been able to do some projects 
+                    that can be found on the portfolio page.As a deveoper who wants to grow I am open to feedback and any 
+                    information that will help my growth.
+                </p>
+                <div class="social-media">
+                    <ul class="nav-list">
+                        <li>
+                            <a href="https://www.linkedin.com/feed/" class="icon-link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/ChegeDaniella" class="icon-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+      
+                    </ul>
+                </div>
+            </div>  
+        </div>
+       </main>
+        <section class="portfolio" id="portfolio" >
+            <div class="container" >
+                <div  class="section-heading">
+                    <h1>Portfolio</h1>
+                    <h6>View some of my work</h6>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-img has-margin-right">
+                        <img src="/static/img/akan.png" alt="akanhome">
+                    </div>
+                    <div class="porfolio-description">
+                        <h6>Web Development</h6>
+                        <h1>Java Script</h1>
+                        <p>This webapp can be able to calculated a users Akan 
+                            name using the birth date.Akan name refers to the 
+                            a naming process used in Ghana according to the gender and day of birthday
+                          Technologies used - Html, Css, JavaScript
+                            </p>
+                            <a href="https://github.com/ChegeDaniella/Akan-Naming">Go to github Repository</a><br>
+                            <a href="https://chegedaniella.github.io/Akan-Naming/">View the website</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="porfolio-description">
+                        <h6>Web Design</h6>
+                        <h1>Angular</h1>
+                        <p>This is a web based application is supposed to input 
+                            quotes together with the authors name and is suposed
+                             to tell the user how long ago the quote has been updated.
+                             An option for liking or disliking a quote is also presented. 
+                            </p>
+                            <a href="https://github.com/ChegeDaniella/Quotes">Go to github Repository</a><br>
+                            <a href="https://chegedaniella.github.io/Quotes/">View the website</a>
+                    </div>
+                    <div class="portfolio-img ">
+                        <img src="/static/img/angular.png" alt="angular">
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-img has-margin-right">
+                        <img src="/static/img/django.png" alt="django">
+                    </div>
+                    <div class="porfolio-description">
+                        <h6>Web Design</h6>
+                        <h1>Python</h1>
+                        <p>This application will give a user the chance to view different 
+                            images.Which have different categories.They will also have a chance
+                             to comment on the various photos they see.
+                             Technologies used - Html, Css, JavaScript
+                            </p>
+                            <a href="https://github.com/ChegeDaniella/My-Gallery">Go to github Repository</a><br>
+                            <a href="https://imagesandgallery.herokuapp.com/">View the website</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+     
+            <div class="footer">
+                <h4> chegedaniella@gmail.com</h4>
+                <h4>@2020</h4>
+            </div>
+       
+     
+
+        {% block scripts %}
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="https://kit.fontawesome.com/b6a799f222.js" crossorigin="anonymous"></script>
+            <script type="text/javascript" src="{%static 'js/index.js'%}"></script>
+            {% bootstrap_javascript %}
+        {% endblock %}
+    
+</body>
+{% endblock %}
+</html>
+

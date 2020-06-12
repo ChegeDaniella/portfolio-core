@@ -1,0 +1,70 @@
+{% extends 'info-files/base.html' %}
+{% load static %}
+{% load bootstrap3 %}
+
+{%include 'navbar.html'%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {%block styles %}
+        {%bootstrap_css%}
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    {% endblock %} 
+    <title>About</title>
+</head>
+<body>
+    {% block content %}
+    <section class="about" id="about">
+        <div class="container">
+            <div class="profile-img">
+                <img src="/static/img/profile.jpeg">
+            </div>
+           
+            <div class="about-details">
+                <div class="about-heading">
+                    <h1>About</h1>
+                    <h6>Myself</h6>
+                </div>
+                <p>Lorem ipsum dolor, sit amet consectetur 
+                    adipisicing elit. Nesciunt esse optio soluta autem nihil 
+                    rem quis obcaecati veritatis. Unde, consequuntur nemo assumenda cum 
+                    deleniti porro qui nesciunt iure perferendis quiaUnde, consequuntur nemo assumenda cum 
+                    deleniti porro qui nesciunt iure perferendis quia.
+                </p>
+                <div class="social-media">
+                    <ul class="nav-list">
+                        <li>
+                            <a href="#" class="icon-link">
+                               <i class="fab fa-facebook-square"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="icon-link">
+                               <i class="fab fa-twitter-square"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="icon-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+         
+        </div>
+    </section>
+
+   
+    {% endblock %}
+    {% block scripts %}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script src="https://kit.fontawesome.com/b6a799f222.js" crossorigin="anonymous"></script>
+        {% bootstrap_javascript %}
+    {% endblock %}
+</body>
+</html>

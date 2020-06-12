@@ -1,0 +1,360 @@
+:root {
+    font-size: 16px;
+    --text-primary: #b6b6b6;
+    --text-secondary: #ececec;
+    --bg-primary: #23232e;
+    --bg-secondary: #141418;
+    --transition-speed: 600ms;
+}
+body {
+    color: black;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(235, 65, 192, 0.73));
+}
+main{
+    margin-left: 6rem;
+    padding: 1rem;
+    
+}
+body::-webkit-scrollbar {
+    width: 0.25rem;
+}
+body::-webkit-scrollbar-track {
+    background: #1e1e24;
+}
+body::-webkit-scrollbar-thumb {
+    background: #6649b8;
+}
+.logo {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+    letter-spacing: 0.3ch;
+    width: 100%;
+}
+.logo i {
+    transform: rotate(0deg);
+    transition: transform var(--transition-speed);
+}
+.navbar:hover .logo i {
+    transform: rotate(-180deg);
+}
+.navbar {
+    position: fixed;
+    background: var(--bg-primary);
+    transition: width 200ms ease;
+}
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+.nav-item {
+    width: 100%;
+}
+.nav-item:last-child {
+    margin-top: auto;
+}
+.nav-link {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    filter: grayscale(100%) opacity(0.7);
+    transition: var(--transition-speed);
+}
+.nav-link:hover {
+    filter: grayscale(0%) opacity(1);
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+}
+.link-text {
+    display: none;
+    margin-left: 1rem;
+}
+.nav-link i {
+    min-width: 2rem;
+    margin: 0 0.5rem;
+}
+.navbar:hover {
+    width: 16rem;
+}
+.navbar:hover .link-text {
+    display: block;
+}
+.nav-link link-text logo-text i:hover {
+    color: #df49a6;
+}
+#fa-primary {
+    color: #ff7eee;
+}
+.fa-secondary {
+    color: #df49a6;
+}
+.fa-primary,
+.fa-secondary {
+    transition: var(--transition-speed);
+}
+
+@media only screen and (max-width: 760px) {
+    .navbar {
+        bottom: 0;
+        width: 100%;
+        height: 5rem;
+    }
+    .logo {
+        display: none;
+    }
+    .navbar-nav {
+        flex-direction: row;
+    }
+    .nav-link {
+        justify-content: center;
+    }
+    main {
+        margin: 0;
+    }
+    /* .about-heading h1 {
+        font-size: 8rem;{
+    }
+    .section-heading h1 {
+        font-size: 3rem;
+    }
+    .about-details .nav-list {
+        flex-direction: initial;
+    }   
+    .about-details li {
+        margin: 0 2rem;
+    } */
+  
+        
+    
+    .about {
+        align-items: center;
+        padding-left: 26rem;
+    }
+    .profile-img {
+        display: none;
+    }
+    .portfolio-item {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        /* padding-left: 26rem; */
+    }
+    .portfolio .container .section-heading {
+        text-align: center;
+    }
+    .portfolio-img {
+        display: none;
+    }
+    .porfolio-description {
+        border: 2px solid white;
+        
+    }
+
+
+}
+
+@media only screen and (min-width: 760px) {
+
+    .navbar {
+        top: 0;
+        width: 5rem;
+        height: 100vh;
+    }
+    .navbar:hover {
+        width: 16rem;
+    }
+    .navbar:hover .link-text {
+        display: inline;
+        transition: opacity var(--transition-speed);
+    }
+
+ 
+    
+}
+.head {
+    text-align: center;
+    font-size: 7rem;
+    letter-spacing: 0.3ch;
+    margin: 0;
+    padding: 0;
+
+}
+/* about styling */
+ul li {
+    list-style: none;
+    display: inline-block;
+    line-height: 100px;
+    padding: 0 20px;
+}
+ul li a:hover {
+    color: #ff7eee;
+}
+.conatiner {
+    width: 90%;
+    max-width: 120rem;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.about .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+.about-heading {
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 60px;
+    margin-bottom: 5rem;
+    padding-top: 6%;
+} 
+.about-heading h1{
+    font-size: 10rem;
+    opacity: .3;
+    margin-bottom: -140px;
+}
+.about-heading h6{
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.profile-img {
+    flex: 1;
+    margin-right: 5rem;
+   
+}
+.profile-img img {
+    width: 350px;
+    height: 560px;
+    object-fit: cover;
+}
+.about-details {
+    flex: 1;
+} 
+.social-media {
+    margin-top: 5rem;
+}
+.social-media i{
+    font-size: 5rem;
+    transition: color 650ms;
+    
+}
+/* projects*/
+#portfolio {
+    margin-left: 6rem;
+}
+.section-heading {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+.section-heading h1 {
+    font-size: 3.5rem;
+    color: rgba(255, 255, 255, .3);
+    text-transform: uppercase;
+    font-weight: 300;
+    position: relative;
+    margin-bottom: 1rem;
+}
+.section-heading h1::before,
+.section-heading h1::after{
+    content: '';
+    position: absolute;
+    bottom: -.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, .75);
+} 
+.section-heading h1::before{
+    width: 10rem;
+    height: 3px;
+    border-radius: .8rem;
+    
+}
+.section-heading h1::after{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 100%;
+    bottom: -1rem;
+}
+
+.section-heading h6 {
+    font-size: 1.6rem;
+    font-weight: 300;
+    
+}
+.has-margin-right {
+    margin-right: 5rem;
+}
+.portfolio-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5rem;
+
+}
+.portfolio-item:last-child {
+    margin-bottom: 0;
+}
+.portfolio-img {
+    flex: 1;
+    border: 2px solid white;
+    
+}
+.portfolio-img img {
+    width: 620px;
+    height: 420px;
+    object-fit: cover;
+}
+.porfolio-description {
+    flex: 1;
+}
+.porfolio-description h6 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    opacity: 0.3;
+}
+.porfolio-description h1 {
+    font-size: 3rem;
+    margin: 1rem 0;
+    font-weight: 300;
+}
+.porfolio-description .cta {
+    display: inline-block;
+    margin-top: 2.5rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: #3883ff;
+    transition: color 650ms;
+}
+.porfolio-description .cta:hover{
+    color: #2f67cd;
+}
+
+.transition-fade {
+    opacity: 1;
+    transition: 500ms;
+}
+html.is-animating .transition-fade {
+    opacity: 0;
+}
+.footer {
+    text-align: center;
+    border: 1px white;
+    background-color: white;
+}
+
+

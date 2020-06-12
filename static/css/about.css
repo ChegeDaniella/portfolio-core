@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    color: white;
+}
+body {
+    width: 100;
+    height: 100;
+    background-image: url(/static/img/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 4%;
+}
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
+p {
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+img {
+    width: 440px;
+    height: 500px;
+    padding-left: 10%;
+}
+
+.conatiner {
+    width: 90%;
+    max-width: 120rem;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.about .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: wheat;
+}
+.about-heading {
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 0;
+    margin-bottom: 6rem;
+} 
+.about-heading h1{
+    font-size: 10rem;
+    opacity: .3;
+    margin-bottom: -71px;
+}
+.about-heading h6{
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.profile-img {
+    flex: 1;
+    margin-right: 5rem;
+}
+.about-details {
+    flex: 1;
+} 
+.social-media {
+    margin-top: 5rem;
+}
+.social-media i{
+    font-size: 5rem;
+    transition: color 650ms;
+}
