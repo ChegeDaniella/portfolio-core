@@ -11,7 +11,7 @@ body {
     background-color: white;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(235, 65, 192, 0.73));
+    background: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(223, 20, 172, 0.73));
 }
 main{
     margin-left: 6rem;
@@ -356,5 +356,6 @@ html.is-animating .transition-fade {
     border: 1px white;
     background-color: white;
 }
+ 
 
 

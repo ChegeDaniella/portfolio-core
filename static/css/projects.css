@@ -1,0 +1,137 @@
+img {
+    max-width:120%;
+    /* height:100%; */
+    /* /* width: 119%;
+    height: 495px; */
+    object-fit: cover; 
+    border: #000000 2px solid;
+}
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body {
+    background-color: #ffdab9;
+    font-family: 'Anton', sans-serif;
+    transition: all 0.5s ease;
+    margin-left: 6rem;
+    padding: 1rem;
+        
+}
+body::-webkit-scrollbar {
+    width: 0.75rem;
+}
+body::-webkit-scrollbar-track {
+    background: #1e1e24;
+}
+body::-webkit-scrollbar-thumb {
+    background: #6649b8;
+}
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.intro-text h1 {
+    font-size: 90px;
+    margin-bottom: 10px;
+}
+.intro-text p {
+    font-size: 22px;
+}
+@-webkit-keyframes arrow-jump {
+    0%   { opacity: 0;}
+    100% { opacity: 1; 
+          -webkit-transform: translateY(10px);
+          -moz-transform: translateY(10px);
+          -0-transform: translateY(10px);
+          transform: translateY(10px);
+      }
+    
+  }
+#arrow {
+    -webkit-animation: arrow-jump 2s infinite; /* Safari 4+ */
+    -moz-animation:    arrow-jump 2s infinite; /* Fx 5+ */
+    -o-animation:      arrow-jump 2s infinite; /* Opera 12+ */
+    animation:         arrow-jump 2s infinite; /* IE 10+, Fx 29+ */
+  }
+
+section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bg-active {
+    background-color: #e5989b;
+} 
+
+/* .middle {
+
+    top: 50%;
+    left: 50%;
+    transform: translate(50%,20%);
+} */
+.card {
+    cursor: pointer;
+    width: 340px;
+    height: 480px;
+}
+.front,.back {
+     /* width: 100%; */
+    /* height: 100%;  */
+    overflow: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: transform .6s linear;
+} 
+.front img {
+    /* height: 160%; */
+    
+}
+.front {
+    transform: perspective(600px) rotateY(0deg);
+}
+.back {
+    background-color: #f1f1f1;
+    transform: perspective(600px) rotateY(180deg);
+}
+.back-content {
+    color: #2c3e50;
+    text-align: center;
+    width: 100%;
+}
+.sm {
+    margin: 20px 0;
+}
+.sm a {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    
+    font-size: 18px;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+.sm a:hover {
+    background: #2c3e50;
+    color: white;
+}
+
+.card:hover {
+ 
+    color: wheat;
+}
+.card:hover > .front {
+    transform: perspective(600px) rotateY(-180deg);
+}
+.card:hover > .back {
+    transform: perspective(600px) rotateY(0deg);
+}

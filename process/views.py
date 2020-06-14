@@ -9,5 +9,8 @@ def about(request):
     return render(request,'about.html') 
 
 def portfolio(request):
-    poj = Project.objects.all()    
-    return render(request,'info-files/projects.html')   
+    poj = Project.objects.all()   
+    context = {
+        "projects":poj
+    }
+    return render(request,'info-files/projects.html', context)   
