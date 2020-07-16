@@ -6,18 +6,25 @@
     --bg-secondary: #141418;
     --transition-speed: 600ms;
 }
+header {
+    background: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,0.6)), url(https://thumbs.dreamstime.com/b/dark-keyboard-gaming-laptop-rgb-backlight-gradient-back-light-close-up-angular-view-defocused-114772134.jpg);
+    height: 100vh;
+    background-size:cover;
+    background-position: center center;
+    position: relative;
+}
 body {
     color: black;
-    background-color: white;
+    background-color: pink;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(223, 20, 172, 0.73));
 }
-main{
+
+main {
     margin-left: 6rem;
     padding: 1rem;
-    
 }
+
 body::-webkit-scrollbar {
     width: 0.25rem;
 }
@@ -44,7 +51,7 @@ body::-webkit-scrollbar-thumb {
 }
 .navbar {
     position: fixed;
-    background: var(--bg-primary);
+    background-color: var(--bg-primary);
     transition: width 200ms ease;
 }
 .navbar-nav {
@@ -75,6 +82,8 @@ body::-webkit-scrollbar-thumb {
     filter: grayscale(0%) opacity(1);
     background: var(--bg-secondary);
     color: var(--text-secondary);
+    width: 16rem;
+    text-decoration: none;
 }
 .link-text {
     display: none;
@@ -82,16 +91,13 @@ body::-webkit-scrollbar-thumb {
 }
 .nav-link i {
     min-width: 2rem;
-    margin: 0 0.5rem;
+    margin: 0 1.5rem;
 }
 .navbar:hover {
     width: 16rem;
 }
 .navbar:hover .link-text {
     display: block;
-}
-.nav-link link-text logo-text i:hover {
-    color: #df49a6;
 }
 #fa-primary {
     color: #ff7eee;
@@ -104,11 +110,14 @@ body::-webkit-scrollbar-thumb {
     transition: var(--transition-speed);
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 600px) {
     .navbar {
         bottom: 0;
         width: 100%;
         height: 5rem;
+    }
+    .navbar:hover {
+    
     }
     .logo {
         display: none;
@@ -122,49 +131,13 @@ body::-webkit-scrollbar-thumb {
     main {
         margin: 0;
     }
-    /* .about-heading h1 {
-        font-size: 8rem;{
-    }
     .section-heading h1 {
         font-size: 3rem;
     }
-    .about-details .nav-list {
-        flex-direction: initial;
-    }   
-    .about-details li {
-        margin: 0 2rem;
-    } */
-  
-        
-    
-    .about {
-        align-items: center;
-        padding-left: 26rem;
-    }
-    .profile-img {
-        display: none;
-    }
-    .portfolio-item {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        /* padding-left: 26rem; */
-    }
-    .portfolio .container .section-heading {
-        text-align: center;
-    }
-    .portfolio-img {
-        display: none;
-    }
-    .porfolio-description {
-        border: 2px solid white;
-        
-    }
-
 
 }
 
-@media only screen and (min-width: 760px) {
+@media only screen and (min-width: 600px) {
 
     .navbar {
         top: 0;
@@ -178,18 +151,63 @@ body::-webkit-scrollbar-thumb {
         display: inline;
         transition: opacity var(--transition-speed);
     }
-
  
     
 }
+
+
+
 .head {
     text-align: center;
-    font-size: 7rem;
-    letter-spacing: 0.3ch;
+    width: 100%;
     margin: 0;
     padding: 0;
-
+    
 }
+.head i {
+    font-size: 7rem;
+}
+.head span {
+    margin-top: 10%;
+    color: white;
+    text-transform: uppercase;
+    display: block;
+}
+.text1 {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+}
+.text2 {
+    font-size: 30px;
+    color: #df49a6;
+    
+}
+.example_e {
+    font-size: 1rem;
+    border: none;
+    background: #404040;
+    color: #ffffff !important;
+    font-weight: 100;
+    padding: 20px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    display: inline-block;
+    transition: all 0.3s ease 0s;
+   
+    text-decoration: none;
+    }
+    .example_e:hover {
+        color: #404040 !important;
+        font-weight: 700 !important;
+        letter-spacing: 3px;
+        background: none;
+        -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+        -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+        transition: all 0.3s ease 0s;
+        }    
 /* about styling */
 ul li {
     list-style: none;
@@ -233,7 +251,8 @@ ul li a:hover {
 
 .profile-img {
     flex: 1;
-    margin-right: 5rem;
+    margin-right: -10%;
+    padding-left: 8%;
    
 }
 .profile-img img {
@@ -246,10 +265,11 @@ ul li a:hover {
 } 
 .social-media {
     margin-top: 5rem;
+    margin-left: 24%;
 }
 .social-media i{
     font-size: 5rem;
-    transition: color 650ms;
+    /* transition: color 650ms; */
     
 }
 /* projects*/
@@ -356,6 +376,7 @@ html.is-animating .transition-fade {
     border: 1px white;
     background-color: white;
 }
+
  
 
 

@@ -7,79 +7,158 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     {% block styles %}
-        <link rel="stylesheet" href="{% static 'css/index.css' %}">
-        <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
     {% endblock %}
-    
-    
+
+
 </head>
 {% block content %}
 {{ block.super }}
+
 <body>
- -->
-   <main>
+    <header>
+    <nav class="navbar">
+        <ul class="navbar-nav">
+            <li class="logo">
+                <a href="{% url 'index' %}" class="nav-link">
+                    <span class="link-text logo-text">Portfolio</span>
+                    <i class="fab fa-3x fa-asymmetrik" id="fa-primary"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{% url 'index' %}" class="nav-link">
+                    <i class="fas fa-2x fa-house-damage" id="fa-primary"></i>
+                    <span class="link-text">Home</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{% url 'index' %}" class="nav-link">
+                    <i class="fab fa-2x fa-audible" id="fa-primary"></i>
+                    <span class="link-text">About me</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{% url 'portfolio' %}" class="nav-link">
+                    <i class="fas fa-2x fa-project-diagram" id="fa-primary"></i>
+                    <span class="link-text">Projects</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="fas fa-3x fa-ankh" id="fa-primary"></i>
+                    <span class="link-text">Enjoy</span>
+                </a>
+            </li>
+        </ul>
 
-    <div class="head" id="head">
-        <i class="fab fa-joomla"></i>
-        
-        <p style="font-family: 'Monoton', cursive;">PORTFOLIO WEBSITE</p>
-            
-    </div>
-    <section class="about" id="about">
-        <div class="container">
-            <div class="profile-img">
-                <img src="/static/img/me.jpg">
-            </div>
-           
-            <div class="about-details">
-                <div class="about-heading">
-                    <h1>About</h1>
-                    <h6>Daniella Chege</h6>
-                </div>
-                <p>Daniella Chege is an aspiring software developer.I have been able to do some projects 
-                    that can be found on the portfolio page.As a deveoper who wants to grow I am open to feedback and any 
-                    information that will help my growth.
-                </p>
-                <div class="social-media">
-                    <ul class="nav-list">
-                        <li>
-                            <a href="https://www.linkedin.com/feed/" class="icon-link">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/ChegeDaniella" class="icon-link">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </li>
-      
-                    </ul>
-                </div>
-            </div>  
+    </nav>
+    <main>
+
+        <div class="head" id="head">
+            <i class="fab fa-joomla"></i><br>
+
+            <!-- <p style="font-family: 'Monoton', cursive;">PORTFOLIO </p>  -->
+            <span class="text1"> Hi,my name is</span>
+            <span class="text2">Daniella</span>
+
         </div>
-       </main>
-       
-     
-            <div class="footer">
-                <h4> chegedaniella@gmail.com</h4>
-                <h4>@2020</h4>
-            </div>
-       
-     
+    </header>
+        <section class="about" id="about">
+            <div class="container">
+                <div class="profile-img">
+                    <img src="/static/img/me.jpg">
+                </div>
 
-        {% block scripts %}
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-            <script src="https://kit.fontawesome.com/b6a799f222.js" crossorigin="anonymous"></script>
-            <script type="text/javascript" src="{%static 'js/index.js'%}"></script>
-            {% bootstrap_javascript %}
-        {% endblock %}
-    
+                <div class="about-details">
+                    <div class="about-heading">
+                        <h1>About</h1>
+                        <h6>Daniella Chege</h6>
+                    </div>
+                    <p>Daniella Chege is an aspiring software developer.I have been able to do some projects
+                        that can be found on the portfolio page.As a deveoper who wants to grow I am open to feedback
+                        and any
+                        information that will help my growth.
+                    </p>
+                    <div class="social-media">
+                        <ul class="nav-list">
+                            <li>
+                                <a href="https://www.linkedin.com/feed/" class="icon-link">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/ChegeDaniella" class="icon-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="inner">
+                <div class="header">
+                    <h1>My skills</h1>
+                </div>
+                <div class="container">
+                    <div class="skill-box">
+                        <div class="skill-title">
+                            <div class="image">
+                                <img src="/static/img/html.png" alt="">
+                            </div>
+                            <h3>HTMl</h3>
+                        </div>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto natus
+                            doloribus amet, commodi similique, veritatis cumque non nihil reiciendis
+                            quas ipsam in aliquid facilis maxime fugit porro? Reprehenderit, aliquid ullam.</p>
+                    </div>
+                    <div class="skill-title">
+                        <div class="image">
+                            <img src="/static/img/angular.svg" alt="">
+                        </div>
+                        <h3>Angular</h3>
+                    </div>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto natus
+                        doloribus amet, commodi similique, veritatis cumque non nihil reiciendis
+                        quas ipsam in aliquid facilis maxime fugit porro? Reprehenderit, aliquid ullam.</p>
+                </div>
+                <div class="skill-title">
+                    <div class="image">
+                        <img src="/static/img/python.png" alt="">
+                    </div>
+                    <h3>Python</h3>
+                </div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto natus
+                    doloribus amet, commodi similique, veritatis cumque non nihil reiciendis
+                    quas ipsam in aliquid facilis maxime fugit porro? Reprehenderit, aliquid ullam.</p>
+            </div>
+            </div> -->
+            </div>
+    </main>
+
+
+    <div class="footer">
+        <h4> chegedaniella@gmail.com</h4>
+        <h4>@2020</h4>
+    </div>
+
+
+
+    {% block scripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/b6a799f222.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{%static 'js/index.js'%}"></script>
+    {% bootstrap_javascript %}
+    {% endblock %}
+
 </body>
 {% endblock %}
-</html>
 
+</html>
